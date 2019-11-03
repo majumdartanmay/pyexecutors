@@ -1,5 +1,5 @@
-from pyexecutors.executors.Executors import Executors
-from pyexecutors.holders.Tasks import AsyncTasks, SyncTasks
+from .pyexecutors import executors
+from .pyexecutors import holders
 
 """
     pyexecutors
@@ -14,7 +14,7 @@ from pyexecutors.holders.Tasks import AsyncTasks, SyncTasks
 
 
 def executor():
-    return Executors()
+    return executors.Executors()
 
 
 def async_tasks(f, args=None, kwargs=None):
@@ -22,7 +22,7 @@ def async_tasks(f, args=None, kwargs=None):
         args = []
     if kwargs is None:
         kwargs = {}
-    return AsyncTasks(f, args, kwargs)
+    return holders.AsyncTasks(f, args, kwargs)
 
 
 def sync_tasks(f, args=None, kwargs=None):
@@ -30,7 +30,7 @@ def sync_tasks(f, args=None, kwargs=None):
         kwargs = {}
     if args is None:
         args = []
-    return SyncTasks(f, args, kwargs)
+    return holders.SyncTasks(f, args, kwargs)
 
 
 __version__ = "0.0.3.dev"
