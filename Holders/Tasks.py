@@ -4,7 +4,7 @@ from abc import abstractmethod
 
 class Tasks:
 
-    def __init__(self, f, *args, **kwargs):
+    def __init__(self, f, args=[], kwargs={}):
         assert f is not None, 'Function cannot be null'
         self.f = f
         self.args = args
