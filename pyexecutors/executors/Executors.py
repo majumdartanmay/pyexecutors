@@ -1,6 +1,6 @@
-from src.holders.Tasks import AsyncTasks, SyncTasks
-from src.utils.BarrierHolder import BarrierHolder
-from src.utils.thread_utils import execute_functions_async
+from pyexecutors.holders.Tasks import AsyncTasks, SyncTasks
+from pyexecutors.utils.BarrierHolder import BarrierHolder
+from pyexecutors.utils.thread_utils import execute_functions_async
 
 
 def execute_tasks(tasks, lock):

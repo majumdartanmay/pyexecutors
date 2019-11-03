@@ -1,8 +1,8 @@
-from src.executors.Executors import Executors
-from src.holders.Tasks import AsyncTasks, SyncTasks
+from pyexecutors.executors.Executors import Executors
+from pyexecutors.holders.Tasks import AsyncTasks, SyncTasks
 
 """
-    src
+    pyexecutors
     ~~~~~~~~~~~
     
     a lite-weight library to efficiently run series of 

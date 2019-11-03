@@ -1,6 +1,6 @@
 import threading
 import time
-from src.executors.Executors import SyncTasks, Executors
+from pyexecutors.executors.Executors import SyncTasks, Executors
 
 
 lock = threading.RLock()
