@@ -1,6 +1,5 @@
-from . import executors
-from . import holders
-
+from pyexecutors.executors.Executors import Executors
+from pyexecutors.holders.Tasks import AsyncTasks, SyncTasks
 """
     pyexecutors
     ~~~~~~~~~~~
