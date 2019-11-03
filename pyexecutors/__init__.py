@@ -1,5 +1,5 @@
-from pyexecutors import executors
-from pyexecutors import holders
+from . import executors
+from . import holders
 
 """
     pyexecutors
