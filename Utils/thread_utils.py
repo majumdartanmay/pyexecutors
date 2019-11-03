@@ -1,20 +1,15 @@
 import threading
-from pyexecutors.Holders.Tasks import Tasks, AsyncTasks, SyncTasks
 
 
 def execute_function(task, lock):
-    if task is not isinstance(task, (AsyncTasks, SyncTasks)):
-        raise ValueError("Invalid data type : {} for {}, please use {}"
-                         .format(type(task),
-                                 'execute_function',
-                                 type(Tasks).__name__))
+
     task.acquire(lock)
     task.f(task.args, task.kwargs)
     task.release(lock)
 
 
 def execute_functions_async(task, lock):
-    thread = threading.Thread(target=task, args=(lock,))
+    thread = threading.Thread(target=execute_function, args=(task, lock,))
     thread.start()
 
 

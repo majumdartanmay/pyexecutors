@@ -1,4 +1,5 @@
 from pyexecutors.Utils.thread_utils import acquire_lock, release_lock, barrier_wait
+from abc import abstractmethod
 
 
 class Tasks:
@@ -9,9 +10,11 @@ class Tasks:
         self.args = args
         self.kwargs = kwargs
 
+    @abstractmethod
     def acquire(self, lock):
         pass
 
+    @abstractmethod
     def release(self, lock):
         pass
 
@@ -25,5 +28,8 @@ class SyncTasks(Tasks):
 
 
 class AsyncTasks(Tasks):
+    def release(self, lock):
+        pass
+
     def acquire(self, barrier):
         barrier_wait(barrier)

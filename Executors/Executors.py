@@ -1,37 +1,38 @@
 from pyexecutors.Holders.Tasks import AsyncTasks, SyncTasks, Tasks
 from pyexecutors.Utils.thread_utils import create_lock, create_barrier, execute_functions_async
+from queue import Queue
+from pyexecutors.Utils.BarrierHolder import BarrierHolder
 
 
 class Executors:
 
     def __init__(self):
-        self.barriers = list()
         self.tasks = list()
-        self.barrier_length = 0
-        self.barrier_cache = None
+        self.barrier_tasks_queue = list()
 
     def enqueue(self, task):
-        if task is not isinstance(task, (SyncTasks, AsyncTasks)):
-            raise ValueError("Invalid data type : {} for {}, please use {}"
-                             .format(type(task),
-                                     type(self).__name__),
-                             type(Tasks).__name__)
+        if task is not isinstance(task, (AsyncTasks, SyncTasks)):
+            raise ValueError('Invalid objects passed to {}'.format('enqueue method'))
 
-        sync_operation = isinstance(task, SyncTasks)
-        prev_task_async = len(self.tasks) > 0 and self.tasks[-1] is isinstance(task, AsyncTasks)
+        sync_task = isinstance(task, SyncTasks)
+        prev_sync_task = len(self.tasks) != 0 and isinstance(self.tasks[-1], SyncTasks)
 
-        if sync_operation and not prev_task_async:
-            self.barrier_cache = create_barrier(self.barrier_length)
-            self.barriers.append(self.barrier_cache)
-        elif not sync_operation:
-            self.barrier_length += 1
-            self.barriers.append(self.barrier_cache)
-        elif sync_operation:
-            self.barriers.append(create_lock())
-        self.tasks.append(task)
+        if sync_task or (not sync_task and prev_sync_task):
+            barrier_holder = BarrierHolder(async_task=not sync_task)
+            barrier_holder.add_task(task)
+            self.barrier_tasks_queue.append(barrier_holder)
+        elif not sync_task:
+            if not prev_sync_task:
+                barrier_holder = BarrierHolder(async_task=True) if len(self.barrier_tasks_queue) == 0 else self.barrier_tasks_queue[-1]
+                barrier_holder.add_task(task)
 
-    def execute(self, callback):
-        if len(self.tasks) == 0:
-            raise Exception('There are not tasks to execute')
-        elif len(self.barriers) != len(self.tasks):
-            raise Exception('Length of the tasks and barriers should always be the same')
+        return self
+
+    def execute(self, callback=None):
+        for barrier_task in self.barrier_tasks_queue:
+            lock = barrier_task.get_barrier()
+            tasks = barrier_task.get_tasks()
+
+    def execute_tasks(self, tasks, lock):
+        for task in tasks:
+            execute_functions_async(task, lock)
