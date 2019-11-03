@@ -2,3 +2,9 @@
 setup.cfg
 setup.py
 pyexecutors\__init__.py
+pyexecutors\executors\Executors.py
+pyexecutors\executors\__init__.py
+pyexecutors\holders\Tasks.py
+pyexecutors\holders\__init__.py
+pyexecutors\utils\BarrierHolder.py
+pyexecutors\utils\thread_utils.py

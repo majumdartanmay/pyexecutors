@@ -2,8 +2,8 @@ from distutils.core import setup
 
 setup(
     name='pyexecutors',
-    packages=['pyexecutors'],
-    version='0.0.8',
+    packages=['pyexecutors', 'pyexecutors.executors', 'pyexecutors.holders', 'pyexecutors.utils'],
+    version='0.0.9',
     license='MIT',  
     description=
     """
@@ -16,7 +16,7 @@ setup(
     author='TANMAY MAJUMDAR',  
     author_email='tanmaymajumdar5612@gmail.com',  
     url='https://github.com/tanmay23235616/pyexecutors',  
-    download_url='https://github.com/tanmay23235616/pyexecutors/archive/0.0.8.tar.gz',
+    download_url='https://github.com/tanmay23235616/pyexecutors/archive/0.0.9.tar.gz',
     keywords=['PYEXECUTOR', 'TANMAY23235616', 'MULTITHREADING'],  
     classifiers=[
         'Development Status :: 4 - Beta',
