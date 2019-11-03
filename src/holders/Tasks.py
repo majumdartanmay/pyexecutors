@@ -1,4 +1,4 @@
-from pyexecutors.utils.thread_utils import acquire_lock, release_lock, barrier_wait
+from src.utils.thread_utils import acquire_lock, release_lock, barrier_wait
 from abc import abstractmethod
 
 

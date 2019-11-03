@@ -1,5 +1,5 @@
-from pyexecutors.holders.Tasks import AsyncTasks, SyncTasks
-from pyexecutors.utils.thread_utils import create_barrier, create_lock
+from src.holders.Tasks import AsyncTasks, SyncTasks
+from src.utils.thread_utils import create_barrier, create_lock
 
 
 class BarrierHolder:
