@@ -1,5 +1,7 @@
 import threading
 import time
+from pyexecutors.executors.Executors import SyncTasks, Executors
+
 
 lock = threading.RLock()
 
@@ -17,3 +19,6 @@ def test_1():
 
     t2 = threading.Thread(target=lock_test)
     t2.start()
+
+
+Executors.enqueue(SyncTasks(test_1)).enqueue(SyncTasks(test_1)).execute()
