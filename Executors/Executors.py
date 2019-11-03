@@ -18,6 +18,7 @@ class Executors:
         if not isinstance(task, (AsyncTasks, SyncTasks)):
             raise ValueError('Invalid objects passed to {}'.format('enqueue method'))
 
+
         sync_task = isinstance(task, SyncTasks)
         prev_sync_task = len(self.tasks) != 0 and isinstance(self.tasks[-1], SyncTasks)
         barrier_holder = BarrierHolder(async_task=not sync_task)
@@ -34,13 +35,15 @@ class Executors:
             if not prev_queue_used:
                 self.barrier_tasks_queue.append(barrier_holder)
 
+        self.tasks.append(task)
+
         return self
 
-    def execute(self, callback=None):
+    def execute(self, final_callback=None):
         for barrier_task in self.barrier_tasks_queue:
             lock = barrier_task.get_barrier()
             tasks = barrier_task.get_tasks()
             execute_tasks(tasks, lock)
 
-        if callback is not None:
-            callback()
+        if final_callback is not None:
+            final_callback()

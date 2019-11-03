@@ -1,10 +1,19 @@
 from pyexecutors.Executors.Executors import Executors
-from pyexecutors.Holders.Tasks import AsyncTasks
+from pyexecutors.Holders.Tasks import  SyncTasks, AsyncTasks
+import time
+import threading
 
 
 def test():
-    print('Hello world')
+    time.sleep(1)
+    print('Hello world '+ str(threading.current_thread()))
 
 
-Executors().enqueue(AsyncTasks(test));
-
+Executors()\
+    .enqueue(SyncTasks(test))\
+    .enqueue(SyncTasks(test)) \
+    .enqueue(SyncTasks(test)) \
+    .enqueue(SyncTasks(test))\
+    .enqueue(SyncTasks(test))\
+    .enqueue(SyncTasks(test)).\
+    execute()

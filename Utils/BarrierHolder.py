@@ -3,6 +3,8 @@ from pyexecutors.Utils.thread_utils import create_barrier, create_lock
 
 
 class BarrierHolder:
+    sync_lock = create_lock()
+
     def __init__(self, async_task):
         self.tasks = list()
         self.barrier = None
@@ -22,7 +24,7 @@ class BarrierHolder:
             if self.barrier is None:
                 self.barrier = create_barrier(len(self.tasks))
         else:
-            self.barrier = create_lock()
+            self.barrier = BarrierHolder.sync_lock
 
         return self.barrier
 

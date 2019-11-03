@@ -1,9 +1,10 @@
 import threading
+import _thread
 
 
 def execute_function(task, lock):
     task.acquire(lock)
-    task.f(task.args, task.kwargs)
+    task.f(*task.args, **task.kwargs)
     task.release(lock)
 
 
@@ -26,12 +27,12 @@ def barrier_wait(barrier):
 
 
 def acquire_lock(lock):
-    if not isinstance(lock, (threading.RLock, threading.Lock)):
+    if not isinstance(lock, _thread.RLock):
         raise ValueError('Invalid param passed to acquire_lock. It should be an instance of Lock')
     lock.acquire()
 
 
 def release_lock(lock):
-    if isinstance(lock, (threading.RLock, threading.Lock)):
+    if not isinstance(lock, _thread.RLock):
         raise ValueError('Invalid param passed to acquire_lock. It should be an instance of Lock')
     lock.release()
