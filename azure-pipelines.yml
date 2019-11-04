@@ -13,12 +13,17 @@ strategy:
     Python36:
       python.version: '3.6'
 
+
 steps:
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
-
+- task: PyPIPublisher@0
+  inputs:
+    pypiConnection: 'PyPi Connection'
+    packageDirectory: './pyexecutors'
+    alsoPublishWheel: true
 - script: |
     python -m pip install --upgrade pip
     pip install -r requirements.txt
