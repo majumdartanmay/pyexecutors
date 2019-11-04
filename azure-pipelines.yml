@@ -19,17 +19,11 @@ steps:
   inputs:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
-- task: PyPIPublisher@0
-  inputs:
-    pypiConnection: 'PyPi Connection'
-    packageDirectory: '.'
-    alsoPublishWheel: true
+
 
 - script: |
-    ls
-    echo $PWD
-    echo $system.defaultworkingdirectory
     python -m pip install --upgrade pip
+    pip install wheel
     pip install -r requirements.txt
   displayName: 'Install dependencies'
 
@@ -37,3 +31,9 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'Testing pyexecutors'
+
+- task: PyPIPublisher@0
+  inputs:
+    pypiConnection: 'PyPi Connection'
+    packageDirectory: '.'
+    alsoPublishWheel: true
