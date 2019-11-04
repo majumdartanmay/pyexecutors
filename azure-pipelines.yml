@@ -22,7 +22,7 @@ steps:
 - task: PyPIPublisher@0
   inputs:
     pypiConnection: 'PyPi Connection'
-    packageDirectory: '$(System.DefaultWorkingDirectory)/pyexecutors'
+    packageDirectory: '$(System.DefaultWorkingDirectory)/tanmay23235616/pyexecutors'
     alsoPublishWheel: true
 - script: |
     python -m pip install --upgrade pip
