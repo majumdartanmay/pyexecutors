@@ -22,7 +22,7 @@ steps:
 - task: PyPIPublisher@0
   inputs:
     pypiConnection: 'PyPi Connection'
-    packageDirectory: '$PWD'
+    packageDirectory: '.'
     alsoPublishWheel: true
 
 - script: |
