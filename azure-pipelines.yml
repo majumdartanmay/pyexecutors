@@ -36,4 +36,4 @@ steps:
   inputs:
     pypiConnection: 'PyPi Connection'
     packageDirectory: '.'
-    alsoPublishWheel: true
+    alsoPublishWheel: false
