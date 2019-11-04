@@ -19,12 +19,9 @@ steps:
   inputs:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
-- task: PyPIPublisher@0
-  inputs:
-    pypiConnection: 'PyPi Connection'
-    packageDirectory: '$(System.DefaultWorkingDirectory)/tanmay23235616/pyexecutors'
-    alsoPublishWheel: true
+
 - script: |
+    echo $PWD
     python -m pip install --upgrade pip
     pip install -r requirements.txt
   displayName: 'Install dependencies'
