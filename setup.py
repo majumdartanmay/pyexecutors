@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name='pyexecutors',
     packages=['pyexecutors', 'pyexecutors.executors', 'pyexecutors.holders', 'pyexecutors.utils'],
-    version='0.0.9',
+    version='0.1.0',
     license='MIT',  
     description=
     """
@@ -16,7 +16,7 @@ setup(
     author='TANMAY MAJUMDAR',  
     author_email='tanmaymajumdar5612@gmail.com',  
     url='https://github.com/tanmay23235616/pyexecutors',  
-    download_url='https://github.com/tanmay23235616/pyexecutors/archive/0.0.9.tar.gz',
+    download_url='https://github.com/tanmay23235616/pyexecutors/archive/0.1.0.tar.gz',
     keywords=['PYEXECUTOR', 'TANMAY23235616', 'MULTITHREADING'],  
     classifiers=[
         'Development Status :: 4 - Beta',
