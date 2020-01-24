@@ -1,4 +1,11 @@
-from distutils.core import setup
+
+from setuptools import setup
+
+# read the contents of your README file
+from os import path
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(
     name='pyexecutors',
@@ -12,7 +19,9 @@ setup(
         without worrying about managing different threads
         on your own.
         
-    """,  
+    """,
+    long_description = long_description,
+    long_description_content_type='text/markdown',
     author='TANMAY MAJUMDAR',  
     author_email='tanmaymajumdar5612@gmail.com',  
     url='https://github.com/tanmay23235616/pyexecutors',  
