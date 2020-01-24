@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name='pyexecutors',
     packages=['pyexecutors', 'pyexecutors.executors', 'pyexecutors.holders', 'pyexecutors.utils'],
-    version='0.1.1',
+    version='0.1.2',
     license='MIT',  
     description=
     """
