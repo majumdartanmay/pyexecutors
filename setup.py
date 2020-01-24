@@ -7,10 +7,10 @@ setup(
     license='MIT',  
     description=
     """
-         a lite-weight library to efficiently run series of 
+         a light-weight library to efficiently run series of 
         asynchronous and synchronous tasks concurrently
         without worrying about managing different threads
-        in your own.
+        on your own.
         
     """,  
     author='TANMAY MAJUMDAR',  
