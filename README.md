@@ -6,7 +6,7 @@
 [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
  [![Downloads](https://pepy.tech/badge/pyexecutors)](https://pepy.tech/project/pyexecutors)
  
- PyExecutors is a utility module which provides straight-forward, powerful functions for working with asynchronous python functions.
+PyExecutors is a utility module which provides straight-forward, powerful functions for working with asynchronous python functions.
  
 This runs an array of functions in series. You can program the functions to run synchronously or asynchronously. 
 
