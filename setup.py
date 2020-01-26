@@ -10,11 +10,11 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 setup(
     name='pyexecutors',
     packages=['pyexecutors', 'pyexecutors.executors', 'pyexecutors.holders', 'pyexecutors.utils'],
-    version='0.1.4',
+    version='0.1.5',
     license='MIT',  
     description=
     """
-         a light-weight library to efficiently run series of 
+         A light-weight library to efficiently run series of 
         asynchronous and synchronous tasks concurrently
         without worrying about managing different threads
         on your own.
