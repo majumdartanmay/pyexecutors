@@ -8,7 +8,7 @@
  
 PyExecutors is a utility module which provides straight-forward, powerful functions for working with asynchronous python functions.
  
-This runs an array of functions in series. You can program the functions to run synchronously or asynchronously. 
+This runs an array of functions in series. You can program the functions to run synchronously or asynchronously in the order you desire. 
 
 ## Installation
 
