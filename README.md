@@ -11,6 +11,7 @@ PyExecutors is a utility module which provides straight-forward, powerful functi
 This runs an array of functions in series. You can program the functions to run synchronously or asynchronously in the order you desire. 
 
 *Are you great with multi-threading?*
+
 [![](https://api.gh-polls.com/poll/01DZM6ZQJE9TQYRE5YS86JAH1S/Yes)](https://api.gh-polls.com/poll/01DZM6ZQJE9TQYRE5YS86JAH1S/Yes/vote)
 [![](https://api.gh-polls.com/poll/01DZM6ZQJE9TQYRE5YS86JAH1S/No)](https://api.gh-polls.com/poll/01DZM6ZQJE9TQYRE5YS86JAH1S/No/vote)
 
