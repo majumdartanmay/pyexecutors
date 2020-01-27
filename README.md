@@ -1,19 +1,25 @@
 # PyExecutors - A simple multi-threading task management library
 
+
+
+
 ![Travis Passing](https://travis-ci.com/tanmay23235616/pyexecutors.svg?branch=master) 
 [![PyPI version](https://badge.fury.io/py/pyexecutors.svg)](https://badge.fury.io/py/pyexecutors) 
 [![PyPI Downloads](https://img.shields.io/pypi/dm/pyexecutors)](https://badge.fury.io/py/pyexecutors)
 [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
  [![Downloads](https://pepy.tech/badge/pyexecutors)](https://pepy.tech/project/pyexecutors)
- 
-PyExecutors is a utility module which provides straight-forward, powerful functions for working with asynchronous python functions.
- 
-This runs an array of functions in series. You can program the functions to run synchronously or asynchronously in the order you desire. 
+
+
 
 *Are you great with multi-threading?*
 
 [![](https://api.gh-polls.com/poll/01DZM6ZQJE9TQYRE5YS86JAH1S/Yes)](https://api.gh-polls.com/poll/01DZM6ZQJE9TQYRE5YS86JAH1S/Yes/vote)
 [![](https://api.gh-polls.com/poll/01DZM6ZQJE9TQYRE5YS86JAH1S/No)](https://api.gh-polls.com/poll/01DZM6ZQJE9TQYRE5YS86JAH1S/No/vote)
+ 
+PyExecutors is a utility module which provides straight-forward, powerful functions for working with asynchronous python functions.
+ 
+This runs an array of functions in series. You can program the functions to run synchronously or asynchronously in the order you desire. 
+
 
 ## Installation
 
