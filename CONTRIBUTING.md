@@ -48,7 +48,7 @@ At this point, you should switch back to your master branch and make sure it's
 up to date with Active Admin's master branch:
 
 ```sh
-git remote add upstream git@github.com:Swati4star/Images-to-PDF.git
+git remote add upstream https://github.com/tanmay23235616/pyexecutors
 git checkout master
 git pull upstream master
 ```
