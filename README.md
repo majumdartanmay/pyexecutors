@@ -46,7 +46,7 @@ Executors() \
 
 **Synchronous Functions**
 > A synchronous functions runs by encapsulation itself with [RLocks](https://docs.python.org/2.0/lib/rlock-objects.html)
-. The lock is released after the functions' execution is complete*
+. The lock is released after the functions' execution is complete
 
 
 **Asynchronous Functions**
