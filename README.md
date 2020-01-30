@@ -63,6 +63,14 @@ The [test function](https://raw.githubusercontent.com/tanmay23235616/pyexecutors
 The argument has been given to match the order of thread execution
 
 
+###Code & Issues
+If you are a developer and you wish to contribute to the library please fork the project and submit a pull request. 
+Follow [Github Flow](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/github-flow) for collaboration! If you have any questions, feel free to ask [me](mailto:tanmay.majumdar@hotmail.com) about whatever you want. 
+
+###Project Maintainers
+This project is founded and actively maintained by [Tanmay Majumdar](https://github.com/tanmay23235616).
+ For any sort of queries feel free to mail at [tanmay.majumdar@nowfloats.com](mailto:tanmay.majumdar@nowfloats.com)
+
 ### License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details
