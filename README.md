@@ -45,12 +45,12 @@ Executors() \
 ### How does it work
 
 **Synchronous Functions**
-> A synchronous functions runs by encapsulation itself with [RLocks](https://docs.python.org/2.0/lib/rlock-objects.html)
+> A synchronous functions runs by encapsulating itself with [RLocks](https://docs.python.org/2.0/lib/rlock-objects.html)
 . The lock is released after the functions' execution is complete
 
 
 **Asynchronous Functions**
-> Asynchronous takes the help of [Barriers](https://docs.python.org/3/library/threading.html). The idea is to create a barrier with limit being the number of consecutive async functions.
+> Asynchronous takes the help of [Barriers](https://docs.python.org/3/library/threading.html). The idea is to create a barrier with the  limit being the number of consecutive async functions.
 > A new barrier is created when a Sync function comes in between. 
 
 ### Running Tests
