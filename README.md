@@ -53,6 +53,16 @@ Executors() \
 > Asynchronous takes the help of [Barriers](https://docs.python.org/3/library/threading.html). The idea is to create a barrier with limit being the number of consecutive async functions.
 > A new barrier is created when a Sync function comes in between. 
 
+### Running Tests
+
+```buildoutcfg
+pip install pytest
+pytest
+```
+The [test function](https://raw.githubusercontent.com/tanmay23235616/pyexecutors/master/pyexecutors/tests/test_executors.py) simply matches the thread number with the argument passed to the functions. 
+The argument has been given to match the order of thread execution
+
+
 ### License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details

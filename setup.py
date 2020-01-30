@@ -10,7 +10,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 setup(
     name='pyexecutors',
     packages=['pyexecutors', 'pyexecutors.executors', 'pyexecutors.holders', 'pyexecutors.utils'],
-    version='0.1.8',
+    version='0.1.9',
     license='MIT',  
     description=
     """
