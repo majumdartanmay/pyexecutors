@@ -69,7 +69,7 @@ Follow [Github Flow](https://help.github.com/en/github/collaborating-with-issues
 
 ### Project Maintainers
 This project is founded and actively maintained by [Tanmay Majumdar](https://github.com/tanmay23235616).
- For any sort of queries feel free to mail at [tanmay.majumdar@nowfloats.com](mailto:tanmay.majumdar@nowfloats.com)
+ For any sort of queries feel free to mail at [tanmay.majumdar@hotmail.com](mailto:tanmay.majumdar@hotmail.com)
 
 ### License
 
