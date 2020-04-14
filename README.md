@@ -60,7 +60,7 @@ Executors() \
 pip install pytest
 pytest
 ```
-The [test function](https://raw.githubusercontent.com/tanmay23235616/pyexecutors/master/pyexecutors/tests/test_executors.py) simply matches the thread number with the argument passed to the functions. 
+The [test function](https://raw.githubusercontent.com/majumdartanmay/pyexecutors/master/pyexecutors/tests/test_executors.py) simply matches the thread number with the argument passed to the functions. 
 The argument has been given to match the order of thread execution
 
 
@@ -69,7 +69,7 @@ If you are a developer and you wish to contribute to the library please fork the
 Follow [Github Flow](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/github-flow) for collaboration! If you have any questions, feel free to ask [me](mailto:tanmay.majumdar@hotmail.com) about whatever you want. 
 
 ### Project Maintainers
-This project is founded and actively maintained by [Tanmay Majumdar](https://github.com/tanmay23235616).
+This project is founded and actively maintained by [Tanmay Majumdar](https://github.com/majumdartanmay).
  For any sort of queries feel free to mail at [tanmay.majumdar@hotmail.com](mailto:tanmay.majumdar@hotmail.com)
 
 ### License
